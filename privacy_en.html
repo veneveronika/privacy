@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Little Patient — Privacy Policy</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 24px 16px; color: #1a1a2e; line-height: 1.7; }
+    h1 { color: #1B3A6B; border-bottom: 3px solid #4DD0E1; padding-bottom: 12px; }
+    h2 { color: #1B3A6B; margin-top: 36px; }
+    h3 { color: #374151; }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+    th { background: #1B3A6B; color: white; padding: 10px; text-align: left; }
+    td { padding: 10px; border-bottom: 1px solid #e5e7eb; }
+    tr:nth-child(even) { background: #f9fafb; }
+    .warn { background: #fffbeb; border-left: 4px solid #f59e0b; padding: 12px 16px; border-radius: 4px; margin: 12px 0; }
+    .info { background: #eff6ff; border-left: 4px solid #3b82f6; padding: 12px 16px; border-radius: 4px; margin: 12px 0; }
+    a { color: #1B3A6B; }
+    nav { background: #f3f4f6; padding: 12px 16px; border-radius: 8px; margin-bottom: 24px; }
+    nav a { margin-right: 16px; text-decoration: none; font-weight: 500; }
+    footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e5e7eb; color: #6b7280; font-size: 0.9em; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">🇧🇬 Политика за поверителност</a>
+  <a href="privacy_en.html">🇬🇧 Privacy Policy (EN)</a>
+  <a href="terms_bg.html">Общи условия</a>
+</nav>
+
+<h1>🏥 Privacy Policy — "Little Patient"</h1>
+
+<p><strong>Last updated:</strong> April 15, 2026 &nbsp;|&nbsp; <strong>Version:</strong> 1.1</p>
+
+<div class="info">
+  <strong>In short:</strong> All your child's health data stays only on your phone, encrypted with AES-256. We have no access to it. The only thing that leaves your device is your email address for Firebase verification.
+</div>
+
+<h2>1. Who we are</h2>
+<p>The "Little Patient" app is created and maintained by:</p>
+<p><strong>Veronika Yankova</strong><br>
+Address: Varna, Bulgaria<br>
+Email: <a href="mailto:veronikagrigorova@gmail.com">veronikagrigorova@gmail.com</a></p>
+
+<h2>2. Data we process</h2>
+<h3>2.1. Data that stays only on your device</h3>
+<ul>
+  <li>Parent profile (name, hashed password)</li>
+  <li>Child profile (name, birth date, gender, school)</li>
+  <li>Health data: vaccinations, growth, allergies, chronic conditions, blood type, lab results, visits, medications, dental, milestones</li>
+</ul>
+<p><strong>Protection:</strong> SQLCipher AES-256 + Android Keystore (hardware-backed)</p>
+
+<h3>2.2. Data that leaves your device</h3>
+<table>
+  <tr><th>Data</th><th>Recipient</th><th>Purpose</th><th>Retention</th></tr>
+  <tr><td>Email address</td><td>Google Firebase Auth (EU)</td><td>Account verification</td><td>Until account deletion</td></tr>
+  <tr><td>Subscription status (yes/no)</td><td>Google Play Billing (EU)</td><td>Premium features</td><td>Until cancellation</td></tr>
+  <tr><td>Crash reports (opt-in)</td><td>Google (EU)</td><td>Bug fixing</td><td>90 days</td></tr>
+</table>
+
+<h2>3. Emergency QR code</h2>
+<div class="warn">
+  <strong>⚠️ Important:</strong> The QR code contains your child's blood type, allergies, chronic conditions, and GP information. <strong>Anyone with a phone camera can scan and read this data.</strong> If you add a home screen widget, the QR code is visible without unlocking your device.
+</div>
+
+<h2>4. Medical disclaimer</h2>
+<div class="info">
+  "Little Patient" is a personal health organizer. <strong>It is not a medical device</strong> under Regulation (EU) 2017/745. It does not replace medical consultation or clinical judgment. In an emergency, call <strong>112</strong>.
+</div>
+
+<h2>5. Data retention and deletion</h2>
+<table>
+  <tr><th>Data</th><th>Retention</th><th>How to delete</th></tr>
+  <tr><td>On-device data</td><td>Until uninstall</td><td>Settings → Delete all data</td></tr>
+  <tr><td>QR images</td><td>Until uninstall</td><td>Automatically deleted on uninstall</td></tr>
+  <tr><td>Exported files (JSON, PDF)</td><td>Your control</td><td>Delete manually from file manager</td></tr>
+  <tr><td>Firebase Auth account (email)</td><td>Until you delete it</td><td>Email veronikagrigorova@gmail.com — deleted within 30 days</td></tr>
+  <tr><td>Crash reports</td><td>90 days</td><td>Expire automatically</td></tr>
+  <tr><td>Google Play transactions</td><td>~10 years (tax law)</td><td>Legal obligation</td></tr>
+</table>
+
+<h2>6. Your rights (GDPR Art. 15–22)</h2>
+<ul>
+  <li><strong>Access (Art. 15)</strong> — Menu → Export</li>
+  <li><strong>Rectification (Art. 16)</strong> — directly in the app</li>
+  <li><strong>Erasure (Art. 17)</strong> — Settings → Delete all data</li>
+  <li><strong>Portability (Art. 20)</strong> — Menu → Export → JSON</li>
+  <li><strong>For Firebase data:</strong> email <a href="mailto:veronikagrigorova@gmail.com">veronikagrigorova@gmail.com</a></li>
+</ul>
+
+<h2>7. Contact</h2>
+<p>Email: <a href="mailto:veronikagrigorova@gmail.com">veronikagrigorova@gmail.com</a><br>
+Subject: "GDPR Request — [type of request]"<br>
+We respond within 30 days.</p>
+
+<h2>8. Supervisory authority</h2>
+<p>Commission for Personal Data Protection (CPDP) — Bulgaria<br>
+<a href="https://www.cpdp.bg">www.cpdp.bg</a></p>
+
+<footer>
+  <p>© 2026 Little Patient · Veronika Yankova · Varna, Bulgaria</p>
+  <p>Version 1.1 — April 15, 2026</p>
+</footer>
+
+</body>
+</html>

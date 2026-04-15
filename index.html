@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Малкият Пациент — Политика за поверителност</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 24px 16px; color: #1a1a2e; line-height: 1.7; }
+    h1 { color: #1B3A6B; border-bottom: 3px solid #4DD0E1; padding-bottom: 12px; }
+    h2 { color: #1B3A6B; margin-top: 36px; }
+    h3 { color: #374151; }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+    th { background: #1B3A6B; color: white; padding: 10px; text-align: left; }
+    td { padding: 10px; border-bottom: 1px solid #e5e7eb; }
+    tr:nth-child(even) { background: #f9fafb; }
+    .badge { display: inline-block; background: #ecfdf5; color: #065f46; border-radius: 4px; padding: 2px 8px; font-size: 0.85em; margin: 2px 0; }
+    .warn { background: #fffbeb; border-left: 4px solid #f59e0b; padding: 12px 16px; border-radius: 4px; margin: 12px 0; }
+    .info { background: #eff6ff; border-left: 4px solid #3b82f6; padding: 12px 16px; border-radius: 4px; margin: 12px 0; }
+    a { color: #1B3A6B; }
+    nav { background: #f3f4f6; padding: 12px 16px; border-radius: 8px; margin-bottom: 24px; }
+    nav a { margin-right: 16px; text-decoration: none; font-weight: 500; }
+    footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e5e7eb; color: #6b7280; font-size: 0.9em; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">🇧🇬 Политика за поверителност</a>
+  <a href="privacy_en.html">🇬🇧 Privacy Policy (EN)</a>
+  <a href="terms_bg.html">Общи условия</a>
+</nav>
+
+<h1>🏥 Политика за поверителност — „Малкият Пациент"</h1>
+
+<p><strong>Последна актуализация:</strong> 15 април 2026 г. &nbsp;|&nbsp; <strong>Версия:</strong> 1.1</p>
+
+<div class="info">
+  <strong>Накратко:</strong> Всички здравни данни на детето ти се пазят само на твоя телефон, шифровани с AES-256. Ние нямаме достъп до тях. Единственото, което напуска устройството, е имейлът ти за Firebase верификация.
+</div>
+
+<h2>1. Кои сме ние</h2>
+<p>Приложението „Малкият Пациент" е създадено и се поддържа от:</p>
+<p><strong>Вероника Янкова</strong><br>
+Адрес: гр. Варна, ул. Сирма Войвода 2, вх Б, ет. 2, ап 1<br>
+Имейл: <a href="mailto:veronikagrigorova@gmail.com">veronikagrigorova@gmail.com</a></p>
+
+<h2>2. Кратко резюме</h2>
+<p><span class="badge">✅</span> Всички данни се пазят само на твоя телефон<br>
+<span class="badge">✅</span> База данни шифрована AES-256<br>
+<span class="badge">✅</span> Ние нямаме достъп до здравните данни на детето ти<br>
+<span class="badge">✅</span> Няма реклами, няма tracking, няма продаване на данни<br>
+<span class="badge warn" style="background:#fffbeb;color:#92400e;">⚠️</span> Имейлът ти се изпраща до Firebase Authentication за верификация<br>
+<span class="badge warn" style="background:#fffbeb;color:#92400e;">⚠️</span> Premium плащания се обработват от Google Play Billing</p>
+
+<h2>3. Какви данни обработваме</h2>
+<h3>3.1. Данни само на устройството</h3>
+<p>Следните данни <strong>никога не напускат</strong> телефона ти:</p>
+<ul>
+  <li>Профил на родителя (имена, парола като PBKDF2 hash)</li>
+  <li>Профил на детето (имена, дата на раждане, пол, учебно заведение)</li>
+  <li>Здравни данни: ваксини, растеж, алергии, хронични заболявания, кръвна група, изследвания, прегледи, лекарства, зъби, milestones</li>
+</ul>
+<p><strong>Защита:</strong> SQLCipher AES-256 + Android Keystore (hardware-backed)</p>
+
+<h3>3.2. Данни, които напускат устройството</h3>
+<table>
+  <tr><th>Данни</th><th>Към кого</th><th>Защо</th><th>Срок</th></tr>
+  <tr><td>Имейл адрес</td><td>Google Firebase Auth (ЕС)</td><td>Верификация на акаунт</td><td>До изтриване на акаунта</td></tr>
+  <tr><td>Факт на абонамент (да/не)</td><td>Google Play Billing (ЕС)</td><td>Premium функции</td><td>До анулиране</td></tr>
+  <tr><td>Crash reports (opt-in)</td><td>Google (ЕС)</td><td>Коригиране на грешки</td><td>90 дни</td></tr>
+</table>
+
+<h2>4. Какво НЕ правим</h2>
+<ul>
+  <li>❌ Не използваме реклами или analytics</li>
+  <li>❌ Не продаваме данни</li>
+  <li>❌ Не използваме детски данни за AI обучение</li>
+  <li>❌ Не следим местоположението ти</li>
+  <li>❌ Не четем контактите или снимките ти</li>
+</ul>
+
+<h2>5. QR код за спешни случаи</h2>
+<div class="warn">
+  <strong>⚠️ Важно:</strong> QR кодът съдържа кръвна група, алергии, хронични заболявания и данни за личен лекар на детето. <strong>Всеки с камера може да сканира и прочете тези данни.</strong> Ако добавиш widget на началния екран, QR кодът е видим без отключване на устройството.
+</div>
+<ul>
+  <li>QR изображението се генерира и съхранява само на устройството</li>
+  <li>Не напуска устройството автоматично</li>
+  <li>Можеш да премахнеш widget-а по всяко време</li>
+</ul>
+
+<h2>6. Медицински отказ от отговорност</h2>
+<div class="info">
+  „Малкият Пациент" е личен здравен органайзер. <strong>Не е медицинско изделие</strong> по смисъла на Регламент (ЕС) 2017/745. Не замества медицинска консултация или лекарска преценка. При спешен случай се обадете на <strong>112</strong>.
+</div>
+
+<h2>7. Срок на съхранение и изтриване</h2>
+<table>
+  <tr><th>Данни</th><th>Срок</th><th>Как да изтриеш</th></tr>
+  <tr><td>Данни на устройството</td><td>До деинсталиране</td><td>Настройки → Изтрий всички данни</td></tr>
+  <tr><td>QR изображения</td><td>До деинсталиране</td><td>Автоматично при деинсталиране</td></tr>
+  <tr><td>Експортирани файлове (JSON, PDF)</td><td>Под твой контрол</td><td>Изтрий ги ръчно от файловия мениджър</td></tr>
+  <tr><td>Firebase Auth акаунт (имейл)</td><td>До изтриване от теб</td><td>Имейл до veronikagrigorova@gmail.com — изтриваме в 30 дни</td></tr>
+  <tr><td>Crash reports</td><td>90 дни</td><td>Изтичат автоматично</td></tr>
+  <tr><td>Google Play транзакции</td><td>~10 години (данъчно)</td><td>Законово задължение</td></tr>
+</table>
+
+<h2>8. Твоите права (GDPR чл. 15–22)</h2>
+<ul>
+  <li><strong>Достъп (чл. 15)</strong> — Меню → Експорт</li>
+  <li><strong>Коригиране (чл. 16)</strong> — директно в приложението</li>
+  <li><strong>Изтриване (чл. 17)</strong> — Настройки → Изтрий всички данни</li>
+  <li><strong>Преносимост (чл. 20)</strong> — Меню → Експорт → JSON</li>
+  <li><strong>За Firebase данни:</strong> изпрати имейл на <a href="mailto:veronikagrigorova@gmail.com">veronikagrigorova@gmail.com</a></li>
+</ul>
+
+<h2>9. Право на жалба</h2>
+<p><strong>Комисия за защита на личните данни (КЗЛД)</strong><br>
+бул. „Проф. Цветан Лазаров" № 2, София 1592<br>
+<a href="https://www.cpdp.bg">www.cpdp.bg</a> | kzld@cpdp.bg | +359 2 915 3 518</p>
+
+<h2>10. Сигурност</h2>
+<ul>
+  <li>AES-256 (SQLCipher) за цялата локална база данни</li>
+  <li>Android Keystore (TEE/StrongBox) за управление на ключа</li>
+  <li>PBKDF2 хеширане на паролата</li>
+  <li>FLAG_SECURE — блокиране на screenshots</li>
+  <li>Автоматично заключване след 90 секунди</li>
+  <li>Без Google Drive backup (<code>android:allowBackup="false"</code>)</li>
+</ul>
+
+<h2>11. Контакт</h2>
+<p>Имейл: <a href="mailto:veronikagrigorova@gmail.com">veronikagrigorova@gmail.com</a><br>
+Тема: „GDPR Request — [вид искане]"<br>
+Отговаряме в рамките на 30 дни.</p>
+
+<footer>
+  <p>© 2026 Малкият Пациент · Вероника Янкова · Варна, България</p>
+  <p>Версия 1.1 — 15 април 2026 г.</p>
+</footer>
+
+</body>
+</html>
