@@ -32,7 +32,7 @@
 
 <h1>🏥 Политика за поверителност — „Малкият Пациент"</h1>
 
-<p><strong>Последна актуализация:</strong> 15 април 2026 г. &nbsp;|&nbsp; <strong>Версия:</strong> 1.1</p>
+<p><strong>Последна актуализация:</strong> 24 април 2026 г. &nbsp;|&nbsp; <strong>Версия:</strong> 1.2</p>
 
 <div class="info">
   <strong>Накратко:</strong> Всички здравни данни на детето ти се пазят само на твоя телефон, шифровани с AES-256. Ние нямаме достъп до тях. Единственото, което напуска устройството, е имейлът ти за Firebase верификация.
@@ -50,7 +50,9 @@
 <span class="badge">✅</span> Ние нямаме достъп до здравните данни на детето ти<br>
 <span class="badge">✅</span> Няма реклами, няма tracking, няма продаване на данни<br>
 <span class="badge warn" style="background:#fffbeb;color:#92400e;">⚠️</span> Имейлът ти се изпраща до Firebase Authentication за верификация<br>
-<span class="badge warn" style="background:#fffbeb;color:#92400e;">⚠️</span> Premium плащания се обработват от Google Play Billing</p>
+<span class="badge warn" style="background:#fffbeb;color:#92400e;">⚠️</span> Premium плащания се обработват от Google Play Billing<br>
+<span class="badge warn" style="background:#fffbeb;color:#92400e;">⚠️</span> <strong>Premium (доброволно):</strong> шифровано резервно копие в твоя Google Drive — само твоето устройство може да го дешифрира<br>
+<span class="badge warn" style="background:#fffbeb;color:#92400e;">⚠️</span> Локални push известия за напомняния (ваксини, прегледи, абонамент) — данните не напускат устройството</p>
 
 <h2>3. Какви данни обработваме</h2>
 <h3>3.1. Данни само на устройството</h3>
@@ -58,7 +60,7 @@
 <ul>
   <li>Профил на родителя (имена, парола като PBKDF2 hash)</li>
   <li>Профил на детето (имена, дата на раждане, пол, учебно заведение)</li>
-  <li>Здравни данни: ваксини, растеж, алергии, хронични заболявания, кръвна група, изследвания, прегледи, лекарства, зъби, milestones</li>
+  <li>Здравни данни: ваксини, растеж, алергии, хронични заболявания, кръвна група и Rh фактор, резултати от изследвания (ПКК, Биохимия, Хормони, Урина, Микробиология, Образна диагностика, Алергология), прегледи, лекарства, зъби, milestones</li>
 </ul>
 <p><strong>Защита:</strong> SQLCipher AES-256 + Android Keystore (hardware-backed)</p>
 
@@ -68,6 +70,7 @@
   <tr><td>Имейл адрес</td><td>Google Firebase Auth (ЕС)</td><td>Верификация на акаунт</td><td>До изтриване на акаунта</td></tr>
   <tr><td>Факт на абонамент (да/не)</td><td>Google Play Billing (ЕС)</td><td>Premium функции</td><td>До анулиране</td></tr>
   <tr><td>Crash reports (opt-in)</td><td>Google (ЕС)</td><td>Коригиране на грешки</td><td>90 дни</td></tr>
+  <tr><td>Шифровано резервно копие (само Premium, доброволно)</td><td>Google Drive API (ЕС)</td><td>Резервно копие при смяна на телефон</td><td>До ръчно изтриване</td></tr>
 </table>
 
 <h2>4. Какво НЕ правим</h2>
@@ -100,6 +103,7 @@
   <tr><td>Данни на устройството</td><td>До деинсталиране</td><td>Настройки → Изтрий всички данни</td></tr>
   <tr><td>QR изображения</td><td>До деинсталиране</td><td>Автоматично при деинсталиране</td></tr>
   <tr><td>Експортирани файлове (JSON, PDF)</td><td>Под твой контрол</td><td>Изтрий ги ръчно от файловия мениджър</td></tr>
+  <tr><td>Google Drive backup файлове (само Premium)</td><td>До ръчно изтриване</td><td>Google Drive → Управление на съхранение → Данни на приложения → Малкият Пациент</td></tr>
   <tr><td>Firebase Auth акаунт (имейл)</td><td>До изтриване от теб</td><td>Имейл до veronikagrigorova@gmail.com — изтриваме в 30 дни</td></tr>
   <tr><td>Crash reports</td><td>90 дни</td><td>Изтичат автоматично</td></tr>
   <tr><td>Google Play транзакции</td><td>~10 години (данъчно)</td><td>Законово задължение</td></tr>
@@ -126,7 +130,8 @@
   <li>PBKDF2 хеширане на паролата</li>
   <li>FLAG_SECURE — блокиране на screenshots</li>
   <li>Автоматично заключване след 90 секунди</li>
-  <li>Без Google Drive backup (<code>android:allowBackup="false"</code>)</li>
+  <li>Автоматичният Android backup е блокиран (<code>android:allowBackup="false"</code>)</li>
+  <li>Доброволен Premium Google Drive backup: шифриран с AES-256-GCM преди качване; ключът е в Android Keystore и никога не напуска устройството</li>
 </ul>
 
 <h2>11. Контакт</h2>
@@ -136,8 +141,9 @@
 
 <footer>
   <p>© 2026 Малкият Пациент · Вероника Янкова · Варна, България</p>
-  <p>Версия 1.1 — 15 април 2026 г.</p>
+  <p>Версия 1.2 — 24 април 2026 г.</p>
 </footer>
 
 </body>
 </html>
+
